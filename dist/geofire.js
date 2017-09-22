@@ -1175,7 +1175,7 @@ var GeoQuery = function (firebaseRef, queryCriteria) {
         var key = keys[i];
         var locationDict = _locationsTracked[key];
         if (typeof locationDict !== "undefined" && locationDict.isInQuery) {
-          callback(key, locationDict.location, locationDict.distanceFromCenter);
+          callback(key, locationDict.location, locationDict.distanceFromCenter, locationDict.customData);
         }
       }
     }
